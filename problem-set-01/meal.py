@@ -24,8 +24,8 @@ def main(meal_times: dict) -> None:
 
     is_mealtime = meal_time(converted, meal_times)
 
-    if is_mealtime:
-        print(is_mealtime, "time")
+    # if user_time isnt found in mealtimes_dict meal_time() returns none
+    return f"{is_mealtime} time" if is_mealtime else ""
 
 
 def convert(time: str) -> int:
@@ -88,4 +88,4 @@ if __name__ == "__main__":
                   "1800-1900": "dinner"
                   }
 
-    main(meal_times)
+    print(main(meal_times))
