@@ -1,7 +1,7 @@
 import re
 
 def mime_check(file_name, mime_dict):
-    try:     
+    try:
         extension = file_name.strip().split(".")[-1].lower()
         # if extension is not valid -> KeyError
         mime_type = mime_dict[extension]
